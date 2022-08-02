@@ -17,8 +17,10 @@ public class ItemRepository {
 
     public void save(Item item){
         if(item.getId() == null){
+            
             em.persist(item);
         }else{
+            
             em.merge(item);
         }
     }
